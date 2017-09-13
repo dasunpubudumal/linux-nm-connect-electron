@@ -1,0 +1,39 @@
+
+.terminal{
+  height: 200px;
+  width: 600px;
+  background-color: black;
+  padding:10px;
+  margin-top: 20px;
+  font-size: 10pt;
+  font-family:cursive;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px black;
+}
+
+.centered{
+  text-align: center;
+}
+
+.btn_ssid{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.jumbotron {
+  margin-top: 0;
+  background-image:url('../img/cover-2.jpg');
+  height:200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.jumbotron .container {
+  position:relative;
+  top:50px;
+}
+
+.navbar{
+  margin-bottom: 0;
+}
