@@ -17,5 +17,11 @@ child = exec("nmcli d wifi", function (error, stdout, stderr) {
 
 $('#get_ssid').click(function(){
   console.log(output);  //TODO: We have to remove this in the production mode.
-  $('#terminal_output').html(output);
+  $('#terminal_output').html(output).attr('class','animated fadeIn');
+});
+
+$('#info').click(function(){
+  $('#details_buttons').attr('class', 'animated wobble col-sm-6');
+  $('#info_section').attr('class', 'animated slideInRight col-sm-6');
+  $('#info_section').css('visibility','visible');
 });

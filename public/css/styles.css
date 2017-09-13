@@ -37,3 +37,11 @@
 .navbar{
   margin-bottom: 0;
 }
+
+.btn {
+  width: 200px;
+}
+
+#info_section {
+  visibility: hidden;
+}

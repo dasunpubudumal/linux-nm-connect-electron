@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<!-- TODO: Some method should be there to copy paste the SSID and connect to WiFI. -->
 <head>
   <meta charset="UTF-8">
   <title>LinuxNMConnect</title>
@@ -39,44 +40,67 @@
   <div class="jumbotron"></div>
   <!-- End of the Jumbotron -->
 
-  <!-- Start of the Terminal -->
-  <div class="container panel panel-default" style="width:800px; box-shadow: 1px 1px 6px 1px black;">
-    <div class="panel-body">
-      <pre style="background-color:transparent;" class="centered"><span id="terminal_output">Welcome to LinuxNMConnect</span></pre>
-    </div>
-    <!-- This is my terminal section. -->
-  </div>
-  <!-- End of the Terminal -->
-
-  <!-- Start of button panel -->
-  <div class="container" align="center" style="width: 600px;">
+  <div class="container" align="center">
+    <!-- Beginning of first row -->
     <div class="row">
-      <div class="col-sm-4">
-        <div class="btn_ssid" role="group" align= "center">
-          <button type="button" class="btn btn-primary" id="get_ssid"> Get SSIDs of Connections</button>
+      <div class="container" id="details_buttons">  <!-- This container will be converted into col-sm-6 when info is clicked.-->
+        <!-- Start of the Terminal -->
+        <div class="panel panel-default" style="width:auto; box-shadow: 1px 1px 6px 1px black;">
+          <div class="panel-body">
+            <pre style="background-color:transparent;" class="centered"><span id="terminal_output">Welcome to LinuxNMConnect</span></pre>
+          </div>
+          <!-- This is my terminal section. -->
+        </div>
+        <!-- End of the Terminal -->
+
+        <!-- Start of button panel -->
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="btn_ssid">
+              <button type="button" class="btn btn-primary" id="get_ssid"> Get SSIDs of Connections</button>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="btn_ssid">
+              <button type="button" class="btn btn-warning" id="info"> Connect to a network</button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="col-sm-4">
-        <div class="btn_ssid" role="group" align= "center">
-          <button type="button" class="btn btn-warning" id="something1"> Get SSIDs of Connections</button>
-        </div>
+      <!-- Start of the second column -->
+      <div class="container" id="info_section">
+        <!-- Start of the form -->
+        <form>
+          <div class="form-group">
+            <label for="user_ssid">Enter SSID</label>
+            <input type="email" class="form-control" id="user_ssid" aria-describedby="help_ssid" placeholder="Enter SSID">
+            <small id="help_ssid" class="form-text text-muted">Copy and paste the SSID of the connection you are trying to connect.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-success" id="btnSubmit">Connect me!</button>
+        </form>
+        <!-- End of the form -->
       </div>
+      <!-- End of the second column -->
 
-      <div class="col-sm-4">
-        <div class="btn_ssid" role="group" align= "center">
-          <button type="button" class="btn btn-danger" id="something2"> Get SSIDs of Connections</button>
-        </div>
-      </div>
     </div>
+    <!-- End of first row -->
   </div>
-  <!-- End of button panel -->
+<!-- End of button panel -->
 
-  <script>
-  require('./renderer.js');
-  window.$ = window.jQuery= require("jquery");
-  </script>
-  <script type="text/javascript" src="./public/js/bootstrap.min.js"></script>
-  <script src="./script.js"></script>
+
+<!-- Place scripts here -->
+<script>
+require('./renderer.js');
+window.$ = window.jQuery= require("jquery");
+</script>
+<script type="text/javascript" src="./public/js/bootstrap.min.js"></script>
+<script src="./script.js"></script>
+<!-- End of Scripts -->
 </body>
 </html>
