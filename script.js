@@ -15,6 +15,8 @@ child = exec("nmcli d wifi", function (error, stdout, stderr) {
   //TODO: We have to remove this in the production mode.
 });
 
+$('#info_section').toggle('hide');
+
 
 $('#get_ssid').click(function(){
   console.log(output);  //TODO: We have to remove this in the production mode.
@@ -24,7 +26,7 @@ $('#get_ssid').click(function(){
 $('#info').click(function(){
   $('#details_buttons').attr('class', 'animated wobble col-sm-6');
   $('#info_section').attr('class', 'animated slideInRight col-sm-6');
-  $('#info_section').css('visibility','visible');
+  $('#info_section').toggle('show');
 });
 
 $('#btnSubmit').click(function(){
